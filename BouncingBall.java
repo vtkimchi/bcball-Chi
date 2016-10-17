@@ -103,6 +103,7 @@ public class BouncingBall extends JFrame {
 
 		@Override
 		protected void paintComponent(Graphics g) {
+long start = System.nanoTime();
 			super.paintComponent(g);
 			setBackground(Color.WHITE);
 			//Ball
@@ -111,6 +112,8 @@ public class BouncingBall extends JFrame {
 			//Mouse trail
 			g.setColor(Color.RED);
 			g.fill3DRect(mouseX-10, mouseY-10, 20, 20,true);
+long duration = System.nanoTime()-start;
+
 		}
 	}
 }
